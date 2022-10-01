@@ -32,6 +32,7 @@ namespace FoodBasketApp.Controllers
 
         public IActionResult CreateItem(ItemViewModel itemViewModel)
         {
+            _foodService.AddFoodItem(itemViewModel.Item);
             return RedirectToAction("Items");
         }
 
